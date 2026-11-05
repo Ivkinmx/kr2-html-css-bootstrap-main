@@ -16,7 +16,7 @@
   <!-- Навигация -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container">
-    <a class="navbar-brand fw-bold text-success" href="index.html">🎓 UniSupport</a>
+    <a class="navbar-brand fw-bold text-success" href="index.html">UniSupport</a>
 
     <button
       class="navbar-toggler"
@@ -223,78 +223,111 @@
       </div>
     </section>
     <!-- FAQ по поступлению -->
-    <section class="my-5 pt-3">
-      <h2 class="h3 fw-bold mb-4 text-center">Часто задаваемые вопросы о поступлении</h2>
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-8">
-          <div class="accordion shadow-sm" id="admissionFaq">
-            
-            <div class="accordion-item">
-              <h3 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">
-                  Что такое приоритеты зачисления и как их расставить?
-                </button>
-              </h3>
-              <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#admissionFaq">
-                <div class="accordion-body small text-muted">
-                  Приоритеты — это цифры (1, 2, 3...), которые вы присваиваете направлениям внутри вузов. Приоритет «1» — самое желанное направление. Если вы проходите по баллам на первое направление, остальные автоматически сгорают. Если не проходите — участвуете в конкурсе по второму приоритету и т.д.
-                </div>
-              </div>
-            </div>
+    <section class="container my-5">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold h3">Частые вопросы по поступлению</h2>
+    <p class="text-muted small">Разбор сложных нюансов приемной кампании</p>
+  </div>
 
-            <div class="accordion-item">
-              <h3 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
-                  Можно ли забрать оригинал аттестата из одного вуза и отвезти в другой?
-                </button>
-              </h3>
-              <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#admissionFaq">
-                <div class="accordion-body small text-muted">
-                  Да, пока идет прием оригиналов (до конца июля), вы можете в любой момент отозвать оригинал (подать заявление об отметке снятия на Госуслугах или забрать бумажный вариант) и отнести его в другой университет, куда вы проходите по баллам.
-                </div>
-              </div>
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-8">
+      <div class="accordion shadow-sm" id="faqAccordionGuide">
+        
+<!-- Вопрос 1 -->
+        <div class="accordion-item border-0 border-bottom">
+          <h3 class="accordion-header" id="guideFaq1">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#guideCollapse1" aria-expanded="false" aria-controls="guideCollapse1">
+              Чем отличается приоритетное зачисление от основного?
+            </button>
+          </h3>
+          <div id="guideCollapse1" class="accordion-collapse collapse" aria-labelledby="guideFaq1" data-bs-parent="#faqAccordionGuide">
+            <div class="accordion-body text-muted small">
+              В рамках приоритетного этапа зачисляются абитуриенты по квотам (целевая, особая, льготная) и победители олимпиад без экзаменов. Основной этап предназначен для общего конкурса по результатам ЕГЭ.
             </div>
-
-            <div class="accordion-item">
-              <h3 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
-                  Сколько дополнительных баллов дают за индивидуальные достижения?
-                </button>
-              </h3>
-              <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#admissionFaq">
-                <div class="accordion-body small text-muted">
-                  В сумме вузы могут начислить максимум до 10 дополнительных баллов к вашим результатам ЕГЭ, даже если у вас больше заслуг. Каждый университет утверждает свой перечень достижений (значок ГТО, аттестат с отличием, волонтерство, олимпиады).
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
-      </div>
-    </section>
 
-  </main>
-
-  <!-- Расширенный подвал -->
-  <footer class="bg-dark text-white py-5 mt-5">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-12 col-md-4">
-          <h5 class="text-success fw-bold mb-3">🎓 UniSupport</h5>
-          <p class="text-muted small mb-3">
-            Профессиональный сервис помощи абитуриентам при поступлении в ведущие вузы страны. Полное сопровождение на каждом этапе.
-          </p>
-          <p class="text-muted small mb-0">&copy; 2026 UniSupport. Все права защищены.</p>
+        <!-- Вопрос 2 -->
+        <div class="accordion-item border-0 border-bottom">
+          <h3 class="accordion-header" id="guideFaq2">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#guideCollapse2" aria-expanded="false" aria-controls="guideCollapse2">
+              Как работает система приоритетов в заявлениях?
+            </button>
+          </h3>
+          <div id="guideCollapse2" class="accordion-collapse collapse" aria-labelledby="guideFaq2" data-bs-parent="#faqAccordionGuide">
+            <div class="accordion-body text-muted small">
+              При подаче документов вы расставляете направления по приоритетам (от 1 до N). Зачисление идет автоматически по наивысшему приоритету, на который вы проходите по конкурсным баллам.
+            </div>
+          </div>
         </div>
 
+        <!-- Вопрос 3 -->
+        <div class="accordion-item border-0 border-bottom">
+          <h3 class="accordion-header" id="guideFaq3">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#guideCollapse3" aria-expanded="false" aria-controls="guideCollapse3">
+              Нужно ли подавать бумажный оригинал аттестата?
+            </button>
+          </h3>
+          <div id="guideCollapse3" class="accordion-collapse collapse" aria-labelledby="guideFaq3" data-bs-parent="#faqAccordionGuide">
+            <div class="accordion-body text-muted small">
+              Сейчас достаточно подтвердить согласие на зачисление онлайн через портал «Госуслуги» в выбранный вуз. Физический оригинал аттестата можно предоставить в университет в установленные регламентом сроки.
+            </div>
+          </div>
+        </div>
+
+        <!-- Вопрос 4 -->
+        <div class="accordion-item border-0 border-bottom">
+          <h3 class="accordion-header" id="guideFaq4">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#guideCollapse4" aria-expanded="false" aria-controls="guideCollapse4">
+              Что делать, если я не прошел в первую волну основного этапа?
+            </button>
+          </h3>
+          <div id="guideCollapse4" class="accordion-collapse collapse" aria-labelledby="guideFaq4" data-bs-parent="#faqAccordionGuide">
+            <div class="accordion-body text-muted small">
+              Не паниковать. Вузы часто проводят дополнительный набор (допзачисление) на оставшиеся вакантные бюджетные места в августе. Также всегда остаются варианты с платным отделением или переводом после первого курса.
+            </div>
+          </div>
+        </div>
+
+        <!-- Вопрос 5 -->
+        <div class="accordion-item border-0">
+          <h3 class="accordion-header" id="guideFaq5">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#guideCollapse5" aria-expanded="false" aria-controls="guideCollapse5">
+              Когда публикуются окончательные приказы о зачислении?
+            </button>
+          </h3>
+          <div id="guideCollapse5" class="accordion-collapse collapse" aria-labelledby="guideFaq5" data-bs-parent="#faqAccordionGuide">
+            <div class="accordion-body text-muted small">
+              Приказы о зачислении на бюджет по общему конкурсу традиционно публикуются в начале августа (обычно до 9 августа включительно).
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+
+<footer class="bg-dark text-white py-5 mt-5 border-top border-secondary">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        
+        <!-- Колонка 1: О проекте и копирайт -->
+<div class="col-12 col-md-4">
+  <h5 class="text-success fw-bold mb-3">UniSupport</h5>
+  <p class="text-white-50 small mb-3">
+    Профессиональный сервис помощи абитуриентам при поступлении в ведущие вузы страны. Полное сопровождение на каждом этапе.
+  </p>
+  <p class="text-white-50 small mb-0">&copy; 2026 UniSupport. Все права защищены.</p>
+</div>
+        <!-- Колонка 2: Навигация (названия пунктов полностью совпадают с верхним меню) -->
         <div class="col-12 col-md-4">
-          <h5 class="fw-bold mb-3 h6">Быстрая навигация</h5>
+          <h5 class="fw-bold mb-3 h6">Навигация</h5>
           <ul class="list-unstyled small mb-0">
-            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="index.html">Главная страница</a></li>
-            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="catalog.html">Каталог университетов</a></li>
+            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="index.html">Главная</a></li>
+            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="catalog.html">Каталог вузов</a></li>
             <li class="mb-2"><a class="text-white-50 text-decoration-none" href="guide.html">Гид по поступлению</a></li>
-            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="order.html">Запись на консультацию</a></li>
-          </ul>
         </div>
 
         <div class="col-12 col-md-4">
@@ -303,15 +336,20 @@
             <li class="mb-2">Почта: <a href="mailto:support@unisupport.ru" class="text-white text-decoration-none">support@unisupport.ru</a></li>
             <li class="mb-2">Телефон: <a href="tel:78005553535" class="text-white text-decoration-none">+7 (800) 555-35-35</a></li>
           </ul>
-          <div class="d-flex gap-2">
-            <a href="https://t.me/unisupport" target="_blank" class="btn btn-outline-light btn-sm px-3">Telegram</a>
-            <a href="https://whatsapp.com" target="_blank" class="btn btn-outline-light btn-sm px-3">WhatsApp</a>
+          
+          <!-- Блок мессенджеров в ряд + кнопка записи на всю их ширину снизу -->
+          <div class="d-flex flex-column gap-2" style="max-width: 260px;">
+            <div class="d-flex gap-2">
+              <a href="https://t.me/unisupport" target="_blank" class="btn btn-outline-light btn-sm flex-fill">Telegram</a>
+              <a href="https://whatsapp.com" target="_blank" class="btn btn-outline-light btn-sm flex-fill">WhatsApp</a>
+            </div>
+            <a href="order.html" class="btn btn-success btn-sm w-100 fw-bold">Записаться</a>
           </div>
         </div>
+
       </div>
     </div>
   </footer>
-
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
   </script>
