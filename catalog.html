@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог ВУЗов — UniSupport</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-light">
+  <!-- Навигация -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-success" href="index.html">🎓 UniSupport</a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar"
+        aria-expanded="false"
+        aria-label="Переключить навигацию"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalog.html">Каталог ВУЗов</a></li>
+          <li class="nav-item"><a class="nav-link" href="guide.html">Гид по поступлению</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Консультация</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Шапка каталога -->
+  <header class="site-header-custom text-white py-5">
+    <div class="container py-3">
+      <div class="row align-items-center g-3">
+        <div class="col-12 col-lg-8">
+          <span class="badge bg-success mb-2 px-3 py-2 fs-6">База университетов 2026</span>
+          <h1 class="display-5 fw-bold mb-3">Каталог ведущих ВУЗов России</h1>
+          <p class="lead mb-0 opacity-75">
+            Актуальные проходные баллы, количество бюджетных мест, наличие общежития и прямые ссылки на официальные приёмные комиссии.
+          </p>
+        </div>
+        <div class="col-12 col-lg-4 text-lg-end">
+          <a class="btn btn-light text-success fw-bold btn-lg px-4" href="order.html">
+            Подобрать индивидуально
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container my-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+      <h1 class="h2 fw-bold mb-0">Каталог университетов</h1>
+
+    </div>
+
+    <!-- Основная сетка: Сайдбар с фильтром (слева) + Карточки (справа) -->
+    <div class="row g-4">
+      
+      <!-- Слева: Sticky-фильтр -->
+      <div class="col-12 col-lg-3">
+        <div class="card shadow-sm border-0 sticky-sidebar">
+          <div class="card-body bg-white rounded">
+            <h2 class="h5 fw-bold mb-3">Фильтр ВУЗов</h2>
+            <form>
+              <div class="mb-3">
+                <label for="filter-dir" class="form-label small fw-bold">Направление</label>
+                <select id="filter-dir" class="form-select form-select-sm">
+                  <option selected>Все направления</option>
+                  <option>ИТ и Программирование</option>
+                  <option>Экономика и Анализ</option>
+                  <option>Фундаментальная наука</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="filter-score" class="form-label small fw-bold">Макс. проходной балл</label>
+                <input id="filter-score" type="number" class="form-control form-control-sm" placeholder="например, 270">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label small fw-bold">Особенности</label>
+                <div class="form-check small">
+                  <input class="form-check-input" type="checkbox" id="check-hostel">
+                  <label class="form-check-label" for="check-hostel">Наличие общежития</label>
+                </div>
+                <div class="form-check small">
+                  <input class="form-check-input" type="checkbox" id="check-军">
+                  <label class="form-check-label" for="check-军">Военная кафедра</label>
+                </div>
+              </div>
+
+              <button type="button" class="btn btn-success btn-sm w-100 mb-2">Применить</button>
+              <button type="reset" class="btn btn-outline-secondary btn-sm w-100">Сбросить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Справа: Сетка карточек университетов (6 штук) -->
+      <div class="col-12 col-lg-9">
+        <div class="row g-4">
+          
+          <!-- ВУЗ 1 -->
+          <div class="col-12 col-md-6 col-xl-4">
+            <div class="card h-100 shadow-sm">
+              <img src="img/img1.png" class="card-img-top" alt="МГТУ им. Баумана">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="card-title h6 fw-bold mb-0">МГТУ им. Баумана</h3>
+                  <span class="badge bg-success">Бюджет</span>
+                </div>
+                <p class="card-text text-muted small">Ведущий технический вуз страны. Сильнейшая инженерная школа.</p>
+                <div class="mt-auto">
+                  <p class="fw-bold text-dark small mb-1">Проходной балл: от 265</p>
+                  <p class="small text-muted mb-3">Мест на бюджете: 3400</p>
+                  <div class="d-flex gap-2">
+                    <a class="btn btn-success btn-sm w-50" href="product.html">Подробнее</a>
+                    <a class="btn btn-outline-secondary btn-sm w-50" href="https://bmstu.ru" target="_blank">Сайт</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ВУЗ 2 -->
+          <div class="col-12 col-md-6 col-xl-4">
+            <div class="card h-100 shadow-sm">
+              <img src="img/img2.png" class="card-img-top" alt="ВШЭ">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="card-title h6 fw-bold mb-0">ВШЭ (НИУ ВШЭ)</h3>
+                  <span class="badge bg-primary">Топ</span>
+                </div>
+                <p class="card-text text-muted small">Современный университет с международными стандартами обучения.</p>
+                <div class="mt-auto">
+                  <p class="fw-bold text-dark small mb-1">Проходной балл: от 280</p>
+                  <p class="small text-muted mb-3">Мест на бюджете: 2100</p>
+                  <div class="d-flex gap-2">
+                    <a class="btn btn-success btn-sm w-50" href="product.html">Подробнее</a>
+                    <a class="btn btn-outline-secondary btn-sm w-50" href="https://hse.ru" target="_blank">Сайт</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ВУЗ 3 -->
+          <div class="col-12 col-md-6 col-xl-4">
+            <div class="card h-100 shadow-sm">
+              <img src="img/img3.png" class="card-img-top" alt="МГУ">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="card-title h6 fw-bold mb-0">МГУ им. Ломоносова</h3>
+                  <span class="badge bg-warning text-dark">Классика</span>
+                </div>
+                <p class="card-text text-muted small">Главный университет России. Фундаментальные исследования.</p>
+                <div class="mt-auto">
+                  <p class="fw-bold text-dark small mb-1">Проходной балл: от 275</p>
+                  <p class="small text-muted mb-3">Мест на бюджете: 4000</p>
+                  <div class="d-flex gap-2">
+                    <a class="btn btn-success btn-sm w-50" href="product.html">Подробнее</a>
+                    <a class="btn btn-outline-secondary btn-sm w-50" href="https://msu.ru" target="_blank">Сайт</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ВУЗ 4 -->
+          <div class="col-12 col-md-6 col-xl-4">
+            <div class="card h-100 shadow-sm">
+              <img src="img/img4.png" class="card-img-top" alt="МФТИ">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="card-title h6 fw-bold mb-0">МФТИ (Физтех)</h3>
+                  <span class="badge bg-success">Наука</span>
+                </div>
+                <p class="card-text text-muted small">Подготовка физиков, математиков и разработчиков мирового уровня.</p>
+                <div class="mt-auto">
+                  <p class="fw-bold text-dark small mb-1">Проходной балл: от 290</p>
+                  <p class="small text-muted mb-3">Мест на бюджете: 1100</p>
+                  <div class="d-flex gap-2">
+                    <a class="btn btn-success btn-sm w-50" href="product.html">Подробнее</a>
+                    <a class="btn btn-outline-secondary btn-sm w-50" href="https://mipt.ru" target="_blank">Сайт</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ВУЗ 5 -->
+          <div class="col-12 col-md-6 col-xl-4">
+            <div class="card h-100 shadow-sm">
+              <img src="img/img5.png" class="card-img-top" alt="СПбПУ">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="card-title h6 fw-bold mb-0">СПбПУ (Политех)</h3>
+                  <span class="badge bg-info text-dark">СПб</span>
+                </div>
+                <p class="card-text text-muted small">Крупный классический политехнический вуз с мощной базой.</p>
+                <div class="mt-auto">
+                  <p class="fw-bold text-dark small mb-1">Проходной балл: от 250</p>
+                  <p class="small text-muted mb-3">Мест на бюджете: 3800</p>
+                  <div class="d-flex gap-2">
+                    <a class="btn btn-success btn-sm w-50" href="product.html">Подробнее</a>
+                    <a class="btn btn-outline-secondary btn-sm w-50" href="https://spbstu.ru" target="_blank">Сайт</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ВУЗ 6 -->
+          <div class="col-12 col-md-6 col-xl-4">
+            <div class="card h-100 shadow-sm">
+              <img src="img/img6.png" class="card-img-top" alt="ИТМО">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="card-title h6 fw-bold mb-0">ИТМО</h3>
+                  <span class="badge bg-primary">IT</span>
+                </div>
+                <p class="card-text text-muted small">Ведущий университет в области IT, программирования и фотоники.</p>
+                <div class="mt-auto">
+                  <p class="fw-bold text-dark small mb-1">Проходной балл: от 285</p>
+                  <p class="small text-muted mb-3">Мест на бюджете: 1300</p>
+                  <div class="d-flex gap-2">
+                    <a class="btn btn-success btn-sm w-50" href="product.html">Подробнее</a>
+                    <a class="btn btn-outline-secondary btn-sm w-50" href="https://itmo.ru" target="_blank">Сайт</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+ <footer class="bg-dark text-white py-5 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- О проекте -->
+        <div class="col-12 col-md-4">
+          <h5 class="text-success fw-bold mb-3">UniSupport</h5>
+          <p class="text-muted small mb-3">
+            Профессиональный сервис помощи абитуриентам при поступлении в ведущие вузы страны. Полное сопровождение на каждом этапе.
+          </p>
+          <p class="text-muted small mb-0">&copy; 2026 UniSupport. Все права защищены.</p>
+        </div>
+
+        <!-- Навигация -->
+        <div class="col-12 col-md-4">
+          <h5 class="fw-bold mb-3 h6">Быстрая навигация</h5>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="index.html">Главная страница</a></li>
+            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="catalog.html">Каталог университетов</a></li>
+            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="guide.html">Гид по поступлению</a></li>
+            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="order.html">Запись на консультацию</a></li>
+          </ul>
+        </div>
+
+        <!-- Контакты и мессенджеры -->
+        <div class="col-12 col-md-4">
+          <h5 class="fw-bold mb-3 h6">Контакты и поддержка</h5>
+          <ul class="list-unstyled small text-white-50 mb-3">
+            <li class="mb-2">Почта: <a href="mailto:support@unisupport.ru" class="text-white text-decoration-none">support@unisupport.ru</a></li>
+            <li class="mb-2">Телефон: <a href="tel:78005553535" class="text-white text-decoration-none">+7 (800) 555-35-35</a></li>
+          </ul>
+          <div class="d-flex gap-2">
+            <a href="https://t.me/unisupport" target="_blank" class="btn btn-outline-light btn-sm px-3">Telegram</a>
+            <a href="https://whatsapp.com" target="_blank" class="btn btn-outline-light btn-sm px-3">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  </script>
+</body>
+</html>
