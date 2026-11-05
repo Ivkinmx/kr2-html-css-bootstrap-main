@@ -40,3 +40,20 @@ body {
     z-index: 10;
   }
 }
+/* Контейнер для иллюстрации с фиксированной высотой и светлым фоном */
+.card-img-container {
+  height: 170px;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 15px;
+}
+
+/* Сама иллюстрация вписывается целиком без обрезания */
+.card-img-top-guide {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}

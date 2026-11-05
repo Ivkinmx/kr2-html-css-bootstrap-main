@@ -14,40 +14,45 @@
 </head>
 <body class="bg-light">
   <!-- Навигация -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold text-success" href="index.html">UniSupport</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-success" href="index.html">🎓 UniSupport</a>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mainNavbar"
-        aria-controls="mainNavbar"
-        aria-expanded="false"
-        aria-label="Переключить навигацию"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar"
+      aria-expanded="false"
+      aria-label="Переключить навигацию"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse" id="mainNavbar">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Главная</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="catalog.html">Каталог ВУЗов</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="guide.html">Гид по поступлению</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="order.html">Консультация</a>
-          </li>
-        </ul>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <!-- Ссылки меню -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+        <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог ВУЗов</a></li>
+        <li class="nav-item"><a class="nav-link" href="guide.html">Гид по поступлению</a></li>
+      </ul>
+
+      <!-- Вынесенные контакты и выделенная кнопка записи -->
+      <div class="d-flex align-items-center gap-3 flex-wrap">
+        <div class="d-none d-xl-flex flex-column text-end small">
+          <a href="tel:78005553535" class="text-white text-decoration-none fw-bold">+7 (800) 555-35-35</a>
+          <span class="text-success" style="font-size: 0.75rem;">Поддержка 24/7</span>
+        </div>
+        <div class="d-flex gap-2">
+          <a href="https://t.me/unisupport" target="_blank" class="btn btn-outline-light btn-sm">TG</a>
+          <a href="https://whatsapp.com" target="_blank" class="btn btn-outline-light btn-sm">WA</a>
+        </div>
+        <a href="order.html" class="btn btn-success fw-bold px-3 shadow-sm animate-pulse">Записаться на консультацию</a>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <main class="container my-5">
     <nav aria-label="breadcrumb">
@@ -124,44 +129,50 @@
     </section>
   </main>
 
- <footer class="bg-dark text-white py-5 mt-5">
-    <div class="container">
-      <div class="row g-4">
-        <!-- О проекте -->
-        <div class="col-12 col-md-4">
-          <h5 class="text-success fw-bold mb-3">UniSupport</h5>
-          <p class="text-muted small mb-3">
-            Профессиональный сервис помощи абитуриентам при поступлении в ведущие вузы страны. Полное сопровождение на каждом этапе.
-          </p>
-          <p class="text-muted small mb-0">&copy; 2026 UniSupport. Все права защищены.</p>
-        </div>
+ <footer class="bg-dark text-white py-5 mt-5 border-top border-success border-opacity-25">
+  <div class="container">
+    <div class="row g-4 align-items-center mb-4 pb-4 border-bottom border-secondary">
+      <div class="col-12 col-lg-8">
+        <h4 class="fw-bold text-success mb-1">Готовы поступить на бюджет без стресса?</h4>
+        <p class="text-muted small mb-0">Запишитесь на бесплатный разбор вашей конкурсной ситуации с экспертом.</p>
+      </div>
+      <div class="col-12 col-lg-4 text-lg-end">
+        <a href="order.html" class="btn btn-success btn-lg px-4 fw-bold shadow">Записаться на консультацию</a>
+      </div>
+    </div>
 
-        <!-- Навигация -->
-        <div class="col-12 col-md-4">
-          <h5 class="fw-bold mb-3 h6">Быстрая навигация</h5>
-          <ul class="list-unstyled small mb-0">
-            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="index.html">Главная страница</a></li>
-            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="catalog.html">Каталог университетов</a></li>
-            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="guide.html">Гид по поступлению</a></li>
-            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="order.html">Запись на консультацию</a></li>
-          </ul>
-        </div>
+    <div class="row g-4">
+      <div class="col-12 col-md-4">
+        <h5 class="text-success fw-bold mb-3">🎓 UniSupport</h5>
+        <p class="text-muted small mb-3">
+          Профессиональный сервис помощи абитуриентам при поступлении в ведущие вузы страны.
+        </p>
+        <p class="text-muted small mb-0">&copy; 2026 UniSupport. Все права защищены.</p>
+      </div>
 
-        <!-- Контакты и мессенджеры -->
-        <div class="col-12 col-md-4">
-          <h5 class="fw-bold mb-3 h6">Контакты и поддержка</h5>
-          <ul class="list-unstyled small text-white-50 mb-3">
-            <li class="mb-2">Почта: <a href="mailto:support@unisupport.ru" class="text-white text-decoration-none">support@unisupport.ru</a></li>
-            <li class="mb-2">Телефон: <a href="tel:78005553535" class="text-white text-decoration-none">+7 (800) 555-35-35</a></li>
-          </ul>
-          <div class="d-flex gap-2">
-            <a href="https://t.me/unisupport" target="_blank" class="btn btn-outline-light btn-sm px-3">Telegram</a>
-            <a href="https://whatsapp.com" target="_blank" class="btn btn-outline-light btn-sm px-3">WhatsApp</a>
-          </div>
+      <div class="col-12 col-md-4">
+        <h5 class="fw-bold mb-3 h6">Быстрая навигация</h5>
+        <ul class="list-unstyled small mb-0">
+          <li class="mb-2"><a class="text-white-50 text-decoration-none" href="index.html">Главная страница</a></li>
+          <li class="mb-2"><a class="text-white-50 text-decoration-none" href="catalog.html">Каталог университетов</a></li>
+          <li class="mb-2"><a class="text-white-50 text-decoration-none" href="guide.html">Гид по поступлению</a></li>
+        </ul>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <h5 class="fw-bold mb-3 h6">Контакты и поддержка</h5>
+        <ul class="list-unstyled small text-white-50 mb-3">
+          <li class="mb-2">📧 Почта: <a href="mailto:support@unisupport.ru" class="text-white text-decoration-none">support@unisupport.ru</a></li>
+          <li class="mb-2">📞 Телефон: <a href="tel:78005553535" class="text-white text-decoration-none">+7 (800) 555-35-35</a></li>
+        </ul>
+        <div class="d-flex gap-2">
+          <a href="https://t.me/unisupport" target="_blank" class="btn btn-outline-light btn-sm px-3">Telegram</a>
+          <a href="https://whatsapp.com" target="_blank" class="btn btn-outline-light btn-sm px-3">WhatsApp</a>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">

@@ -14,40 +14,45 @@
 </head>
 <body class="bg-light">
   <!-- Навигация -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold text-success" href="index.html">UniSupport</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-success" href="index.html">🎓 UniSupport</a>
 
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mainNavbar"
-        aria-controls="mainNavbar"
-        aria-expanded="false"
-        aria-label="Переключить навигацию"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar"
+      aria-expanded="false"
+      aria-label="Переключить навигацию"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse" id="mainNavbar">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Главная</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="catalog.html">Каталог ВУЗов</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="guide.html">Гид по поступлению</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="order.html">Консультация</a>
-          </li>
-        </ul>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <!-- Ссылки меню -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+        <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог ВУЗов</a></li>
+        <li class="nav-item"><a class="nav-link" href="guide.html">Гид по поступлению</a></li>
+      </ul>
+
+      <!-- Вынесенные контакты и выделенная кнопка записи -->
+      <div class="d-flex align-items-center gap-3 flex-wrap">
+        <div class="d-none d-xl-flex flex-column text-end small">
+          <a href="tel:78005553535" class="text-white text-decoration-none fw-bold">+7 (800) 555-35-35</a>
+          <span class="text-success" style="font-size: 0.75rem;">Поддержка 24/7</span>
+        </div>
+        <div class="d-flex gap-2">
+          <a href="https://t.me/unisupport" target="_blank" class="btn btn-outline-light btn-sm">TG</a>
+          <a href="https://whatsapp.com" target="_blank" class="btn btn-outline-light btn-sm">WA</a>
+        </div>
+        <a href="order.html" class="btn btn-success fw-bold px-3 shadow-sm animate-pulse">Записаться на консультацию</a>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- Шапка страницы -->
   <header class="site-header-custom text-white py-5">
@@ -66,9 +71,11 @@
     <section class="mb-5">
       <h2 class="h3 fw-bold mb-4 text-center">5 главных шагов к зачислению</h2>
       <div class="row g-4">
-        
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm border-0 p-3">
+<div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-img-container">
+              <img src="img/step1.png" class="card-img-top-guide" alt="Шаг 1">
+            </div>
             <div class="card-body">
               <span class="badge bg-success mb-2">Шаг 1</span>
               <h3 class="h5 fw-bold">Сдача экзаменов и баллы</h3>
@@ -81,6 +88,9 @@
 
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100 shadow-sm border-0 p-3">
+            <div class="card-img-container">
+            <img src="img/step2.png" class="card-img-top-guide" alt="Шаг 1" style="height: 140px; object-fit: cover;">
+            </div>
             <div class="card-body">
               <span class="badge bg-success mb-2">Шаг 2</span>
               <h3 class="h5 fw-bold">Выбор стратегии (5 вузов)</h3>
@@ -93,6 +103,9 @@
 
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100 shadow-sm border-0 p-3">
+            <div class="card-img-container">
+            <img src="img/step3.png" class="card-img-top-guide" alt="Шаг 1" style="height: 140px; object-fit: cover;">
+            </div>
             <div class="card-body">
               <span class="badge bg-success mb-2">Шаг 3</span>
               <h3 class="h5 fw-bold">Подача документов</h3>
@@ -105,6 +118,9 @@
 
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100 shadow-sm border-0 p-3">
+            <div class="card-img-container">
+            <img src="img/step4.png" class="card-img-top-guide" alt="Шаг 1" style="height: 140px; object-fit: cover;">
+            </div>
             <div class="card-body">
               <span class="badge bg-success mb-2">Шаг 4</span>
               <h3 class="h5 fw-bold">Анализ списков</h3>
@@ -117,6 +133,9 @@
 
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100 shadow-sm border-0 p-3">
+            <div class="card-img-container">
+            <img src="img/step5.png" class="card-img-top-guide" alt="Шаг 1" style="height: 140px; object-fit: cover;">
+            </div>
             <div class="card-body">
               <span class="badge bg-success mb-2">Шаг 5</span>
               <h3 class="h5 fw-bold">Оригинал и приказ</h3>
@@ -140,7 +159,7 @@
       </div>
     </section>
 
-    <!-- Истории успеха (Отзывы) -->
+   <!-- Истории успеха (Отзывы) -->
     <section class="my-5 py-4">
       <h2 class="h3 fw-bold mb-4 text-center">Истории успешного поступления</h2>
       
@@ -150,7 +169,7 @@
           <div class="card h-100 shadow-sm border-0 p-3 bg-white">
             <div class="card-body d-flex flex-column">
               <div class="d-flex align-items-center mb-3">
-                <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center fw-bold me-3" style="width: 45px; height: 45px;">МХ</div>
+                <img src="img/user1.jpg" alt="Максим Хомяков" class="rounded-circle me-3 shadow-sm" style="width: 50px; height: 50px; object-fit: cover;">
                 <div>
                   <h3 class="h6 fw-bold mb-0">Максим Хомяков</h3>
                   <p class="text-muted small mb-0">Поступил в МГТУ им. Баумана</p>
@@ -169,10 +188,10 @@
           <div class="card h-100 shadow-sm border-0 p-3 bg-white">
             <div class="card-body d-flex flex-column">
               <div class="d-flex align-items-center mb-3">
-                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold me-3" style="width: 45px; height: 45px;">АС</div>
+                <img src="img/user2.jpg" alt="Анастасия Смирнова" class="rounded-circle me-3 shadow-sm" style="width: 50px; height: 50px; object-fit: cover;">
                 <div>
-                  <h3 class="h6 fw-bold mb-0"> Анастасия Смирнова</h3>
-                  <p class="text-muted small mb-0">Поступила в ВШЭ (Экономика)</p>
+                  <h3 class="h6 fw-bold mb-0">Анастасия Смирнова</h3>
+                  <p class="text-muted small mb-0">Поступил в ВШЭ (Экономика)</p>
                 </div>
               </div>
               <p class="card-text text-muted small fst-italic mb-3">
@@ -188,7 +207,7 @@
           <div class="card h-100 shadow-sm border-0 p-3 bg-white">
             <div class="card-body d-flex flex-column">
               <div class="d-flex align-items-center mb-3">
-                <div class="bg-warning text-dark rounded-circle d-flex align-items-center justify-content-center fw-bold me-3" style="width: 45px; height: 45px;">ДП</div>
+                <img src="img/user3.jpg" alt="Дмитрий Петров" class="rounded-circle me-3 shadow-sm" style="width: 50px; height: 50px; object-fit: cover;">
                 <div>
                   <h3 class="h6 fw-bold mb-0">Дмитрий Петров</h3>
                   <p class="text-muted small mb-0">Поступил в ИТМО</p>
@@ -203,7 +222,6 @@
         </div>
       </div>
     </section>
-
     <!-- FAQ по поступлению -->
     <section class="my-5 pt-3">
       <h2 class="h3 fw-bold mb-4 text-center">Часто задаваемые вопросы о поступлении</h2>
