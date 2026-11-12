@@ -13,45 +13,49 @@
 </head>
 <body class="bg-light">
   <!-- Навигация -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold text-success" href="index.html">UniSupport</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-success" href="index.html">UniSupport</a>
+      <button id="themeToggle" class="btn btn-outline-light btn-sm" type="button" title="Сменить тему">
+        Темная тема
+      </button>
 
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#mainNavbar"
-      aria-controls="mainNavbar"
-      aria-expanded="false"
-      aria-label="Переключить навигацию"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar"
+        aria-expanded="false"
+        aria-label="Переключить навигацию"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <!-- Ссылки меню -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-        <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог ВУЗов</a></li>
-        <li class="nav-item"><a class="nav-link" href="guide.html">Гид по поступлению</a></li>
-      </ul>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <!-- Ссылки меню -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог вузов</a></li>
+          <li class="nav-item"><a class="nav-link" href="guide.html">Гид по поступлению</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Консультация</a></li>
+        </ul>
 
-      <!-- Вынесенные контакты и выделенная кнопка записи -->
-      <div class="d-flex align-items-center gap-3 flex-wrap">
-        <div class="d-none d-xl-flex flex-column text-end small">
-          <a href="tel:78005553535" class="text-white text-decoration-none fw-bold">+7 (800) 555-35-35</a>
-          <span class="text-success" style="font-size: 0.75rem;">Поддержка 24/7</span>
+        <!-- Вынесенные контакты и выделенная кнопка записи -->
+        <div class="d-flex align-items-center gap-3 flex-wrap">
+          <div class="d-none d-xl-flex flex-column text-end small">
+            <a href="tel:78005553535" class="text-white text-decoration-none fw-bold">+7 (800) 555-35-35</a>
+            <span class="text-success" style="font-size: 0.75rem;">Поддержка 24/7</span>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="https://t.me/unisupport" target="_blank" class="btn btn-outline-light btn-sm">TG</a>
+            <a href="https://whatsapp.com" target="_blank" class="btn btn-outline-light btn-sm">WA</a>
+          </div>
+          <a href="order.html" class="btn btn-success fw-bold px-3 shadow-sm">Записаться на консультацию</a>
         </div>
-        <div class="d-flex gap-2">
-          <a href="https://t.me/unisupport" target="_blank" class="btn btn-outline-light btn-sm">TG</a>
-          <a href="https://whatsapp.com" target="_blank" class="btn btn-outline-light btn-sm">WA</a>
-        </div>
-        <a href="order.html" class="btn btn-success fw-bold px-3 shadow-sm animate-pulse">Записаться на консультацию</a>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
   <!-- Шапка каталога -->
   <header class="site-header-custom text-white py-5">
@@ -74,34 +78,32 @@
   </header>
 
   <main class="container my-5">
-
     <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
-      <h1 class="h2 fw-bold mb-0">Каталог университетов</h1>
-
+      <h2 class="h2 fw-bold mb-0">Каталог университетов</h2>
     </div>
 
     <!-- Основная сетка: Сайдбар с фильтром (слева) + Карточки (справа) -->
     <div class="row g-4">
       
-      <!-- Слева: Sticky-фильтр -->
+      <!-- Слева: Сайдбар-фильтр -->
       <div class="col-12 col-lg-3">
-        <div class="card shadow-sm border-0 sticky-sidebar">
+        <div class="card shadow-sm border-0 sticky-top" style="top: 80px;">
           <div class="card-body bg-white rounded">
-            <h2 class="h5 fw-bold mb-3">Фильтр ВУЗов</h2>
-            <form>
+            <h3 class="h5 fw-bold mb-3">Фильтр ВУЗов</h3>
+            <form id="filterForm">
               <div class="mb-3">
                 <label for="filter-dir" class="form-label small fw-bold">Направление</label>
                 <select id="filter-dir" class="form-select form-select-sm">
-                  <option selected>Все направления</option>
-                  <option>ИТ и Программирование</option>
-                  <option>Экономика и Анализ</option>
-                  <option>Фундаментальная наука</option>
+                  <option value="all">Все направления</option>
+                  <option value="ИТ и Программирование">ИТ и Программирование</option>
+                  <option value="Экономика и Анализ">Экономика и Анализ</option>
+                  <option value="Фундаментальная наука">Фундаментальная наука</option>
                 </select>
               </div>
 
               <div class="mb-3">
                 <label for="filter-score" class="form-label small fw-bold">Макс. проходной балл</label>
-                <input id="filter-score" type="number" class="form-control form-control-sm" placeholder="например, 270">
+                <input id="filter-score" type="number" class="form-control form-control-sm" placeholder="например, 290" value="310" min="200" max="310">
               </div>
 
               <div class="mb-3">
@@ -111,24 +113,28 @@
                   <label class="form-check-label" for="check-hostel">Наличие общежития</label>
                 </div>
                 <div class="form-check small">
-                  <input class="form-check-input" type="checkbox" id="check-军">
-                  <label class="form-check-label" for="check-军">Военная кафедра</label>
+                  <input class="form-check-input" type="checkbox" id="check-military">
+                  <label class="form-check-label" for="check-military">Военная кафедра</label>
                 </div>
               </div>
 
-              <button type="button" class="btn btn-success btn-sm w-100 mb-2">Применить</button>
-              <button type="reset" class="btn btn-outline-secondary btn-sm w-100">Сбросить</button>
+              <button type="button" id="applyFilterBtn" class="btn btn-success btn-sm w-100 mb-2">Применить</button>
+              <button type="reset" id="resetFilterBtn" class="btn btn-outline-secondary btn-sm w-100">Сбросить</button>
             </form>
           </div>
         </div>
       </div>
 
-      <!-- Справа: Сетка карточек университетов (6 штук) -->
+      <!-- Справа: Сетка карточек университетов -->
       <div class="col-12 col-lg-9">
-        <div class="row g-4">
+        <div class="row g-4" id="uniCatalogGrid">
           
           <!-- ВУЗ 1 -->
-          <div class="col-12 col-md-6 col-xl-4">
+          <div class="col-12 col-md-6 col-xl-4 uni-card" 
+               data-direction="ИТ и Программирование" 
+               data-score="265" 
+               data-hostel="true" 
+               data-military="true">
             <div class="card h-100 shadow-sm">
               <img src="img/img1.png" class="card-img-top" alt="МГТУ им. Баумана">
               <div class="card-body d-flex flex-column">
@@ -150,7 +156,11 @@
           </div>
 
           <!-- ВУЗ 2 -->
-          <div class="col-12 col-md-6 col-xl-4">
+          <div class="col-12 col-md-6 col-xl-4 uni-card" 
+               data-direction="Экономика и Анализ" 
+               data-score="280" 
+               data-hostel="true" 
+               data-military="false">
             <div class="card h-100 shadow-sm">
               <img src="img/img2.png" class="card-img-top" alt="ВШЭ">
               <div class="card-body d-flex flex-column">
@@ -172,7 +182,11 @@
           </div>
 
           <!-- ВУЗ 3 -->
-          <div class="col-12 col-md-6 col-xl-4">
+          <div class="col-12 col-md-6 col-xl-4 uni-card" 
+               data-direction="Фундаментальная наука" 
+               data-score="275" 
+               data-hostel="true" 
+               data-military="true">
             <div class="card h-100 shadow-sm">
               <img src="img/img3.png" class="card-img-top" alt="МГУ">
               <div class="card-body d-flex flex-column">
@@ -194,7 +208,11 @@
           </div>
 
           <!-- ВУЗ 4 -->
-          <div class="col-12 col-md-6 col-xl-4">
+          <div class="col-12 col-md-6 col-xl-4 uni-card" 
+               data-direction="ИТ и Программирование" 
+               data-score="290" 
+               data-hostel="true" 
+               data-military="false">
             <div class="card h-100 shadow-sm">
               <img src="img/img4.png" class="card-img-top" alt="МФТИ">
               <div class="card-body d-flex flex-column">
@@ -216,7 +234,11 @@
           </div>
 
           <!-- ВУЗ 5 -->
-          <div class="col-12 col-md-6 col-xl-4">
+          <div class="col-12 col-md-6 col-xl-4 uni-card" 
+               data-direction="ИТ и Программирование" 
+               data-score="250" 
+               data-hostel="true" 
+               data-military="true">
             <div class="card h-100 shadow-sm">
               <img src="img/img5.png" class="card-img-top" alt="СПбПУ">
               <div class="card-body d-flex flex-column">
@@ -238,7 +260,11 @@
           </div>
 
           <!-- ВУЗ 6 -->
-          <div class="col-12 col-md-6 col-xl-4">
+          <div class="col-12 col-md-6 col-xl-4 uni-card" 
+               data-direction="ИТ и Программирование" 
+               data-score="285" 
+               data-hostel="true" 
+               data-military="true">
             <div class="card h-100 shadow-sm">
               <img src="img/img6.png" class="card-img-top" alt="ИТМО">
               <div class="card-body d-flex flex-column">
@@ -265,37 +291,43 @@
     </div>
   </main>
 
- <footer class="bg-dark text-white py-5 mt-5 border-top border-secondary">
+  <footer class="bg-dark text-white py-5 mt-5 border-top border-secondary">
     <div class="container">
       <div class="row g-4 align-items-start">
         
         <!-- Колонка 1: О проекте и копирайт -->
-<div class="col-12 col-md-4">
-  <h5 class="text-success fw-bold mb-3">UniSupport</h5>
-  <p class="text-white-50 small mb-3">
-    Профессиональный сервис помощи абитуриентам при поступлении в ведущие вузы страны. Полное сопровождение на каждом этапе.
-  </p>
-  <p class="text-white-50 small mb-0">&copy; 2026 UniSupport. Все права защищены.</p>
-</div>
+        <div class="col-12 col-md-4">
+          <h5 class="text-success fw-bold mb-3">UniSupport</h5>
+          <p class="text-white-50 small mb-3">
+            Профессиональный сервис помощи абитуриентам при поступлении в ведущие вузы страны. Полное сопровождение на каждом этапе.
+          </p>
+          <p class="text-white-50 small mb-0">&copy; 2026 UniSupport. Все права защищены.</p>
+        </div>
 
-        <!-- Колонка 2: Навигация (названия пунктов полностью совпадают с верхним меню) -->
+        <!-- Колонка 2: Навигация -->
         <div class="col-12 col-md-4">
           <h5 class="fw-bold mb-3 h6">Навигация</h5>
           <ul class="list-unstyled small mb-0">
             <li class="mb-2"><a class="text-white-50 text-decoration-none" href="index.html">Главная</a></li>
             <li class="mb-2"><a class="text-white-50 text-decoration-none" href="catalog.html">Каталог вузов</a></li>
             <li class="mb-2"><a class="text-white-50 text-decoration-none" href="guide.html">Гид по поступлению</a></li>
+            <li class="mb-2"><a class="text-white-50 text-decoration-none" href="order.html">Консультация</a></li>
           </ul>
         </div>
 
+        <!-- Колонка 3: Контакты, мессенджеры и кнопка записи -->
         <div class="col-12 col-md-4">
           <h5 class="fw-bold mb-3 h6">Контакты и поддержка</h5>
           <ul class="list-unstyled small text-white-50 mb-3">
-            <li class="mb-2">Почта: <a href="mailto:support@unisupport.ru" class="text-white text-decoration-none">support@unisupport.ru</a></li>
-            <li class="mb-2">Телефон: <a href="tel:78005553535" class="text-white text-decoration-none">+7 (800) 555-35-35</a></li>
+            <li class="mb-2">Почта: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=support@unisupport.ru&su=Консультация%20по%20поступлению" target="_blank" class="text-white text-decoration-none">support@unisupport.ru</a></li>
+           <li class="mb-2 d-flex align-items-center gap-2">
+  <span>Телефон: <span class="text-white">+7 (800) 555-35-35</span></span>
+  <button type="button" class="btn btn-outline-secondary btn-sm py-0 px-2" onclick="copyPhone(this)" title="Скопировать номер">
+    Копия
+  </button>
+</li>
           </ul>
           
-          <!-- Блок мессенджеров в ряд + кнопка записи на всю их ширину снизу -->
           <div class="d-flex flex-column gap-2" style="max-width: 260px;">
             <div class="d-flex gap-2">
               <a href="https://t.me/unisupport" target="_blank" class="btn btn-outline-light btn-sm flex-fill">Telegram</a>
@@ -309,8 +341,7 @@
     </div>
   </footer>
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-  </script>
+  <script src="js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
